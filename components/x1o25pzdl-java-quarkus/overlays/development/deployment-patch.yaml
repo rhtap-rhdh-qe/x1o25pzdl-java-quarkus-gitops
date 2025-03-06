@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: x1o25pzdl-java-quarkus
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/dance-bootstrap-app:latest
-        name: container-image  
+        - image: rhtap-quay-quay-rhtap-quay.apps.325cb0b3-86b0-47f8-8c0c-ff0f4f8f85ac.prod.konfluxeaas.com/rhtap/rhtap-qe-java-quarkus:3a7a7287f6bfe63359550fcecd24369673b69425@sha256:e060f042d658aae0bb78c146eb1ef900e7ca78f2c1462b6fe10054efc61fb479
+          name: container-image
